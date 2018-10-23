@@ -3115,7 +3115,17 @@ void checkRAM( String &a ) {
   \*********************************************************************************************/
 void tone_espEasy(uint8_t _pin, unsigned int frequency, unsigned long duration) {
   #ifdef ESP32
-    delay(duration);
+    int ledchannel = 1;
+     //delay(duration);
+    if(ledcRead(ledchannel)){ return; } // up to 16 channels here. This will return if it is in use.
+    ledcAttachPin(_pin, ledchannel);
+    ledcWriteTone(ledchannel, frequency);
+    if (duration)
+    {
+      delay(duration);
+      ledcDetachPin(_pin);
+      ledcWrite(ledchannel, 0);
+    }
   #else
     analogWriteFreq(frequency);
     //NOTE: analogwrite reserves IRAM and uninitalized ram.
