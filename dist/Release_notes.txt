@@ -1,4 +1,89 @@
 -------------------------------------------------
+Changes in release mega-20181028 (since mega-20181027)
+-------------------------------------------------
+
+Release date: Sun Oct 28 04:00:09 CET 2018
+
+Saverio Cisternino (5):
+      [CRON] Replace timeStruct with standard tm
+      [CRON] Plugin
+      [CRON] Add event PLUGIN_TIME_CHANGE
+      [CRON] Intercept event PLUGIN_TIME_CHANGE
+      [CRON] Fixed Daily flash write rate exceeded!
+
+TD-er (2):
+      [Cron] Rename plugin name to match naming convention
+      [Eastron] Make configurable and allow for multiple values read (#1684)
+
+
+-------------------------------------------------
+Changes in release mega-20181027 (since mega-20181026)
+-------------------------------------------------
+
+Release date: Sat Oct 27 04:00:12 CEST 2018
+
+Bartlomiej Zimon (1):
+      CSE7766 - fix stats plus add buffer fill level
+
+Gilad (7):
+      Add IR RAW2 Reading / Transmitting.
+      Add IR RAW2 Reading / Transmitting.
+      Add IR RAW2 Reading / Transmitting - fixed ambiguity.
+      Add IR RAW2 Reading / Transmitting - added a safety check.
+      Improved IR RAW2 format to support RLE.
+      Fixed warnings...
+      Fixed warnings...
+
+Gilad Raz (1):
+      Increased buffer size. Added constants.
+
+Plebs (4):
+      doubleclick and longpress for PCF and MCP
+      fixed a display bug
+      final fixes
+      fixed as requested
+
+
+-------------------------------------------------
+Changes in release mega-20181026 (since mega-20181025)
+-------------------------------------------------
+
+Release date: Fri Oct 26 04:00:22 CEST 2018
+
+Bartlomiej Zimon (7):
+      CSE7766 uses 8E1 serial connection
+      Ser2Net catch serial data only if plugin used
+      CSE7766 add online checksumming, autosyncing without data loos
+      move to PLUGIN_TEN_PER_SECOND     update comments
+      move to PLUGIN_SERIAL_IN from PLUGIN_TEN_PER_SECOND - serial commandline uses our data
+      optimization - remove double checksum check
+      CSE7766 - add some stats to debug log
+
+Saverio Cisternino (1):
+      Fixed plugin timer processing do not start, when call setPluginTaskTimer in PLUGIN_TIMER_IN
+
+TD-er (1):
+      [C009] Reduce memory usage for C009 controller.
+
+
+-------------------------------------------------
+Changes in release mega-20181025 (since mega-20181023)
+-------------------------------------------------
+
+Release date: Thu Oct 25 04:00:13 CEST 2018
+
+Saverio Cisternino (1):
+      Added auto redirect to home after run reboot command from web page.
+
+TD-er (5):
+      [WDT] Change yield() to delay(0)
+      [Build] Add Sonoff POW R2 (4MB)
+      [Sonoff] Add pre-defined switch and relay + rules on factory reset
+      [Info] Remove MD5 check fail on self-built images
+      [Travis] Use variables even when no predefined plugins are added.
+
+
+-------------------------------------------------
 Changes in release mega-20181023 (since mega-20181022)
 -------------------------------------------------
 
